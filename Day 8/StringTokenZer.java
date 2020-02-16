@@ -3,6 +3,19 @@ import java.util.StringTokenizer;
 public class StringTokenZer
 {
     public static void main(String[] args) {
+
+        // public String[] split(String regex, int limit)
+
+        String s = "Hello World Info Planet";
+        System.out.println(s.split(" ")); // [Ljava.lang.String;@15db9742 // array of Strings returned by this method
+        String []  st = new String[50];
+        st = s.split(" ");
+        for(String v: st)
+        {
+            System.out.println(v);
+        }
+       
+
         // StringTokenizer st = new StringTokenizer("this is my first line in string tokenizer ");
         // while(st.hasMoreTokens())
         // {
@@ -66,11 +79,11 @@ public class StringTokenZer
         // {
         //     System.out.println(st.nextElement());
         // }
-        StringTokenizer st  = new StringTokenizer("Info %plan% et is b%est in%stitute f%r java coding");
-         while(st.hasMoreElements())
-        {
-            System.out.println(st.nextToken("%"));
-        }
+        // StringTokenizer st  = new StringTokenizer("Info %plan% et is b%est in%stitute f%r java coding");
+        //  while(st.hasMoreElements())
+        // {
+            // System.out.println(st.nextToken("%"));
+        // }
     
         // System.out.println(st); // java.util.StringTokenizer@15db9742
 
