@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class CommandLine
 {
     public static void main(String[] args) {
@@ -45,8 +46,49 @@ public class CommandLine
         sum is 180
         */
 
-        // ----------------------------------------------------------------------
+    // ----------------------------------------------------------------------
+        // Read two strings and find whether they are equal
         
+        
+        // if(args[0].equals(args[1]))
+        //     System.out.println("Equal");
+        // else
+        //     System.out.println("Not Equal");
+        
+      // ----------------------------------------------------------------------------
+      // read n strings and find out whether "info" string is provided or not
+        // boolean counter = false;
+        // for(String v: args)
+        // {
+        //     if(v.equals("info"))
+        //     {
+        //         counter = true;
+        //         break;
+        //     }
+        // }
+        // if(counter)
+        // {
+        //     System.out.println("Found");
+        // }
+        // else{
+        //     System.out.println("Not Found");
+        // }
+
+        // -----------------------------------------------------------------------------
+        // Program to read n numbers from cmd and sort them
+        // int [] a = new int[args.length];
+        // for(int i=0; i<args.length; i++)
+        // {
+        //     a[i] = Integer.parseInt(args[i]);
+        // }
+        // Arrays.sort(a);
+        // for(int v : a)
+        // {
+        //     System.out.println(v);
+        // }
+
+        // ------------------------------------------------------------------------------
+            
 
     }
 }

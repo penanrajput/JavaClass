@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 class Student
 {
@@ -15,6 +15,7 @@ class Student
         Scanner in = new Scanner(System.in);
         name = in.next();
         marks = in.nextDouble();
+        in.close();
     }
     void putData()
     {
