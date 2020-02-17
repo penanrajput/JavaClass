@@ -5,7 +5,7 @@ public class Biginteger{
         int a, b;                
         BigInteger A, B, C ; 
        
-        
+        /*
          // BigInteger object.multiply(BigInteger val)
         a = 54;
         b = 23;
@@ -18,5 +18,13 @@ public class Biginteger{
 
         C = A.multiply(B);
         System.out.println(C);
+        */
+
+
+        // multiply with big numbers
+        BigInteger bi1 = new BigInteger("4845154845121455555254655485");
+        BigInteger bi2 = new BigInteger("484515484512145555525465545");
+        BigInteger bi3 = bi1.multiply(bi2);
+        System.out.println(bi3);
     }
 }
