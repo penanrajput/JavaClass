@@ -1,35 +1,19 @@
+import java.util.ArrayList;
+
 class Sample
 {
 
-    public static void  printSymbols(char[] cmd)
+    public static void main(String[] args) 
     {
-        for(char ch : cmd)
+        int a = 60;
+        System.out.println(a>>1);
+        while(a>0)
         {
-            System.out.println(ch);
+            System.out.print(a%2);
+            a = (int)a / 2;
         }
-    }
-    static String[] letter_P_data =
-        {      
- 
-                "XXXXXXXX  ",
-                "XX     XX ",
-                "XX     XX ",
-                "XXXXXXXX  ",
-                "XX        ",
-                "XX        ",
-                "XX        "
-        };
-
-    public static void main(String[] args) {
-        
-        
-        for(int i=0; i<letter_P_data.length; i++)
-        {
-            System.out.println(letter_P_data[i]);
-         
-            
-        }
-
-        
+    
+    
+    
     }
 }

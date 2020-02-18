@@ -13,7 +13,7 @@
       - the use of arrays of strings
 */
 
-import java.util.* ;
+// import java.util.* ;
 
 class BigLetters
 {
@@ -74,13 +74,13 @@ class BigLetters
                                 };
     static String[] letter_G_data =
                                 {
-                                    "XXXXXXX  ",
+                                    " XXXXXX  ",
                                     "XX       ",
                                     "XX       ",
                                     "XXXXXXXX ",
                                     "XX    XX ",
                                     "XX    XX ",
-                                    "XXXXXXX  "
+                                    "XXXXXXXX "
                                 };
     static String[] letter_H_data =
                                 {
@@ -98,6 +98,7 @@ class BigLetters
                                     "XXXXXXXX  ",
                                     "   XX     ",
                                     "   XX     ",
+                                    "   XX     " ,
                                     "   XX     " ,
                                     "   XX     ",
                                     "XXXXXXXX  "  
@@ -151,10 +152,31 @@ static String[] letter_N_data =
 "XX     XX  ",
 "XXX    XX  ",
 "XX XX  XX  ",
-"XX   X XX  ",
+"XX   XXXX  ",
 "XX    XXX  ",
 "XX     XX  ",
 "XX     XX  "
+};
+
+static String[] letter_Y_data =
+{
+    "XX        XX ",
+    " XX      XX  ",
+    "  XX    XX   ",
+    "   XX  XX    ",
+    "     XX      ",
+    "     XX      ",
+    "     XX      "
+};
+static String[] letter_S_data =
+{
+" XXXXXXXX  ",
+"XX         ",
+"XX         ",
+"XXXXXXXXX  ",
+"       XX  ",
+"       XX  ",
+"XXXXXXXX   "
 };
 
 
@@ -180,6 +202,17 @@ static String[] letter_P_data =
                 "XX        ",
                 "XX        "
         };
+        static String[] letter_R_data =
+        {      
+ 
+                "XXXXXXXX  ",
+                "XX     XX ",
+                "XX     XX ",
+                "XXXXXXXX  ",
+                "XX  XX    ",
+                "XX    XX  ",
+                "XX     XX "
+        };
 
    static String[] get_letter_data( char given_letter )
    {
@@ -193,7 +226,12 @@ static String[] letter_P_data =
           case 'E': letter_data = letter_E_data; break;
           case 'F': letter_data = letter_F_data; break;
           case 'P': letter_data = letter_P_data; break;
-          case 'N': letter_data = letter_N_data; break;
+          case 'R': letter_data = letter_R_data; break;
+          case 'Y': letter_data = letter_Y_data; break;
+          case 'H': letter_data = letter_H_data; break;
+          case 'G': letter_data = letter_G_data; break;
+          case 'S': letter_data = letter_S_data; break;
+
           
       }
       return letter_data ;
@@ -210,23 +248,91 @@ static String[] letter_P_data =
         System.out.print( "\n" ) ;
     }
     */
+    /*
     static void print_big_letter( char [] given_letter )
     {
-        for(int i=0; i<given_letter.length; i++)
+        for(int j=0; j<7; j++)
         {
-            char letter = givenletter[i]
             for(int i=0; i<given_letter.length; i++)
             {
-                System.out.println(given_letter[i]);
-            
+
+                String[] letter = get_letter_data(given_letter[i] );
+                System.out.print(letter[j]+ "   ");
             }
+            System.out.println();
+        }
+        
+    }
+    */
+
+    /*
+    // widen the letters 
+    static void print_big_letter( char [] given_letter )
+    {
+        for(int j=0; j<7; j++)
+        {
+            for(int i=0; i<given_letter.length; i++)
+            {
+
+                String[] letter = get_letter_data(given_letter[i] );
+                // System.out.print(letter[j]+ "   ");
+                for(int l=0;l<letter[j].length(); l++)
+                {
+                    for(int temp=0; temp<2; temp++)
+                        System.out.print(letter[j].charAt(l));
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+    */
+
+    /*
+    // optimised the letters 
+    static void print_big_letter( char [] given_letter )
+    {
+        for(int j=0; j<7; j++)
+        {
+            for(int i=0; i<given_letter.length; i++)
+            {
+
+                String[] letter = get_letter_data(given_letter[i] );
+                // System.out.print(letter[j]+ "   ");
+                
+                for(int l=0;l<letter[j].length(); l++)
+                {
+                        System.out.print("" + letter[j].charAt(l)+ letter[j].charAt(l));
+                }
+            }
+            System.out.println();
+        }
+        
+    }
+    */
+
+
+    //-----------------------------------
+    static void print_big_letter( String given_letter_string )
+    {
+        char[] given_letter = given_letter_string.toCharArray();
+        for(int j=0; j<7; j++)
+        {
+            for(int i=0; i<given_letter.length; i++)
+            {
+
+                String[] letter = get_letter_data(given_letter[i] );
+                System.out.print(letter[j]+ "   ");
+            }
+            System.out.println();
         }
         
     }
 
-
-   public static void main( String[] not_in_use )
+   public static void main( String[] args )
    {
+        System.out.println();
+        System.out.println();
     //   Scanner  keyboard  =  new  Scanner( System.in ) ;
 
 
@@ -235,8 +341,9 @@ static String[] letter_P_data =
     //   print_big_letter( 'N' ) ;
     //   print_big_letter( 'A' ) ;
     //   print_big_letter( 'N' ) ;
-    print_big_letter(new char[]{'P', 'E', 'N', 'A', 'N'});
+
+    
+    // print_big_letter(new char[]{'P', 'E', 'N', 'A', 'N'});
+        print_big_letter(args[0]);
    }
 }
-
-
