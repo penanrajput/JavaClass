@@ -153,6 +153,8 @@ class Star
 {
     public static void main(String [] args)
     {
+        Scanner in = new Scanner(System.in);
+        final int n = in.nextInt();
 
 // ---------------------------------------------------------
 // pattern
@@ -264,7 +266,7 @@ class Star
 // 32123
 // 4321234
 // 53212345
-
+/*
 Scanner in = new Scanner(System.in);
 int n = in.nextInt();
 for(int i=1; i<=n; i++)
@@ -281,6 +283,30 @@ for(int i=1; i<=n; i++)
     System.out.println();
 }
 in.close();
+*/
+
+/*
+1       1
+ 2     2
+  3   3
+   4 4
+    5
+   */
+ 
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(i==j || i==n-j-1)
+                    System.out.print("*");
+                
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        in.close();
+
         
 
 

@@ -1,19 +1,12 @@
 import java.util.ArrayList;
-
 class Sample
 {
-
-    public static void main(String[] args) 
+    public static void main(String[] args) {
+        System.out.println(fun(20));
+    
+    }
+    static int fun(int x)
     {
-        int a = 60;
-        System.out.println(a>>1);
-        while(a>0)
-        {
-            System.out.print(a%2);
-            a = (int)a / 2;
-        }
-    
-    
-    
+        return 10;
     }
 }
