@@ -1,0 +1,26 @@
+https://stackoverflow.com/questions/47368347/java-inheritance-within-the-same-package-not-finding-class
+
+
+D:\code\Java\JavaClass\Day\MyProject\DefaultPackage\
+
+info
+	Animal.java 	(package info;)
+	Bird.java 	(package info;)
+	Test.java 	(package info;)
+
+
+on path to -> D:\code\Java\JavaClass\Day\MyProject\DefaultPackage\
+run like 
+
+javac info/Test.java
+java info/Test
+
+// 
+
+if tried to run commands at location D:\code\Java\JavaClass\Day\MyProject\DefaultPackage\
+like 
+javac Test.java
+java Test
+
+
+you will get error

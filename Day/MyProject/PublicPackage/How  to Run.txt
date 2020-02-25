@@ -1,0 +1,19 @@
+how to run
+
+path D:\code\Java\JavaClass\Day\MyProject\ProtectedPackage
+two different packages
+	info
+		Animal
+		
+	packages
+		Shape extends Animal
+			Shape s = new Shape();
+
+
+extend the Animal Class
+create object of Shape and access the Animal members through Shape Object
+
+
+javac planet/Shape.java
+java  planet/Shape
+
