@@ -1,4 +1,5 @@
 // Bit sequence: 110101111101011111101011111110 (without bit stuffing)
+// delimiter   : 0111110
 // Bit sequence: 110101111100101111101010111110110 (with bit stuffing)
 
 import java.util.Scanner;
