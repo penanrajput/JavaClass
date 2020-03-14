@@ -1,0 +1,44 @@
+common ones // total 7
+
+add(Object o)
+add(index, Object)
+remove(Object o)
+get(index)
+indexOf(Object o)
+size()
+capacity()
+contains(Object o)
+
+
+
+
+Collections
+
+
+      List
+
+                  Vector
+                  LinkedList
+                  Stack
+                        push()
+                        pop()
+                        empty()
+                        peek() // top of stack element
+                        search(Object o)
+
+      Set
+
+            clear()
+            clone()
+            isEmpty()
+
+                  HashSet (same)
+                  LinkedHashSet (same)
+                  TreeSet
+                        addAll(Collection)
+                        descendingSet()
+                        first()
+                        last()
+                        pollFirst() // removes first(loweest)element
+                        pollLast() // removes last(highest)element
+                        subSet(....)

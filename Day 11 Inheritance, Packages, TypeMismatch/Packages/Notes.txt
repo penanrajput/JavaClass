@@ -1,0 +1,4 @@
+main things about packages is that 
+main class file should be out of the package folder (not necessary)
+
+like in this case Test.java contains main method 
