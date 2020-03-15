@@ -77,52 +77,101 @@ class Test
 // DataStream
       // DataInputStream
       // DataOutputStream
-      import java.io.*;
-      import java.util.*;
+/*
+import java.io.*;
+import java.util.*;
 
-      class Test
-      {
-            public static void main(String[] args) throws  IOException, ClassNotFoundException {
-                  Scanner in = new Scanner(System.in);
-                  int    x = 12345;
-                  double y = 45666.4875125;
-                  char   z = 'A';
+class Test
+{
+      public static void main(String[] args) throws  IOException, ClassNotFoundException {
+            Scanner in = new Scanner(System.in);
+            int    x = 12345;
+            double y = 45666.4875125;
+            char   z = 'A';
 
-                  System.out.println("Enter output filename : ");
-                  String filename = in.next();
-
-
-                  try
-                  {
-                        DataOutputStream fout = new DataOutputStream(new FileOutputStream(filename));
-                        fout.writeInt(x);
-                        fout.writeDouble(y);
-                        fout.writeChar(z);
-                        fout.close();
-                        System.out.println("Data Written Successful");
-
-                        System.out.println("Reading from file -> " + filename);
-
-                        DataInputStream fin = new DataInputStream(new FileInputStream(filename));
-                        int a = fin.readInt();
-                        double b = fin.readDouble();
-                        char c = fin.readChar();
-
-                        System.out.println(" a -> " + a);
-                        System.out.println(" b -> " + b);
-                        System.out.println(" c -> " + c);
-                        System.out.println("Data Input Successful");
-                  }
-                  catch(FileNotFoundException e)
-                  {
-                        // System.out.println(e);
-                        System.out.println("File Doesn't exists ");
-                  }
+            System.out.println("Enter output filename : ");
+            String filename = in.next();
 
 
+            try
+            {
+                  DataOutputStream fout = new DataOutputStream(new FileOutputStream(filename));
+                  fout.writeInt(x);
+                  fout.writeDouble(y);
+                  fout.writeChar(z);
+                  fout.close();
+                  System.out.println("Data Written Successful");
+
+                  System.out.println("Reading from file -> " + filename);
+
+                  DataInputStream fin = new DataInputStream(new FileInputStream(filename));
+                  int a = fin.readInt();
+                  double b = fin.readDouble();
+                  char c = fin.readChar();
+
+                  System.out.println(" a -> " + a);
+                  System.out.println(" b -> " + b);
+                  System.out.println(" c -> " + c);
+                  System.out.println("Data Input Successful");
             }
-      }
+            catch(FileNotFoundException e)
+            {
+                  // System.out.println(e);
+                  System.out.println("File Doesn't exists ");
+            }
 
+
+      }
+}
+*/
+
+import java.io.*;
+import java.util.*;
+
+class Test
+{
+      public static void main(String[] args) throws  IOException, ClassNotFoundException {
+            Scanner in = new Scanner(System.in);
+
+            System.out.println("Enter output filename : ");
+            String filename = in.next();
+
+
+            try
+            {
+                  DataOutputStream fout = new DataOutputStream(new FileOutputStream(filename));
+                  for(int i=1000; i<=10000; i+=1000)
+                        fout.writeInt(i);
+
+                  fout.close();
+
+                  System.out.println("Data Written Successful");
+                  System.out.println("Reading from file -> " + filename);
+
+                  DataInputStream fin = new DataInputStream(new FileInputStream(filename));
+
+                  int a = fin.readInt();
+                  while(true) // file : EOFException when file is end-of-file
+                  {
+                        System.out.println(" a -> " + a);
+                        a = fin.readInt();
+                  }
+                  // System.out.println("Data Input Successful");
+            }
+            catch(EOFException e)
+            {
+                  // System.out.println(e);
+                  // System.out.println();
+            }
+            catch(FileNotFoundException e)
+            {
+                  // System.out.println(e);
+                  System.out.println("File Doesn't exists ");
+            }
+
+
+      }
+}
 
 
 
