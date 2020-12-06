@@ -1,0 +1,10 @@
+javac MyApplet.java
+appletviewer MyApplet.java
+
+// both the commands in one line
+javac MyApplet.java & appletviewer MyApplet.java
+
+
+// Important
+// Both the times we give only source code name 
+// not class file 

@@ -1,0 +1,90 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Python File by PENAN",
+            "command": "",
+            "args": [
+                "start",
+                "cmd",
+                "/c",
+                "py ${fileBasenameNoExtension}.py & echo. & echo. & pause"
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file by PENAN",
+            "command": "g++.exe",
+            "args": [
+                "-g",
+                "${relativeFile}",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
+                "&&",
+                "start",
+                "cmd",
+                "/c",
+                "${fileBasenameNoExtension} & echo. & echo. & pause"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Run JAVA File by PENAN",
+            "command": "javac",
+            "args": [
+                "${relativeFile}",
+                "&",
+                "start",
+                "cmd",
+                "/c",
+                "cd \"\\${relativeFileDirname}\" & java ${fileBasenameNoExtension} & cd ..\" & echo. & echo. & pause"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "Run JAVA Advanced Java by PENAN",
+            "command": "",
+            "args": [
+                "javac",
+                "${relativeFile}",
+                "&",
+                "appletviewer",
+                "${relativeFile}",
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

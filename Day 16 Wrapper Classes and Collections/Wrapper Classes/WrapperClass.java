@@ -1,8 +1,20 @@
 // program 1 : WrapperClass
 
+class A
+{
+      String str;
+      public A(String s)
+      {
+            str = s;
+      }
+
+}
+
+
 class WrapperClass
 {
       public static void main(String[] args) {
+            /*
             byte b = 30;
             short s = 4563;
             int i = 40; // supports till 9 digits
@@ -31,11 +43,21 @@ class WrapperClass
             {
                   x = i;
             }
+
+            // as JDK 9, the constructors has been deprecated
+            // today we recommended that ypu use static metod valueOf() to obtain the Wrapper Object
+            public static Integer valueOf(int i)
+            0
+            {
+                  x = i;
+            }
+      }
       }
 
       }
 }
 */
+      /*
             Byte bb = new Byte(b);
             Short ss = new Short(s);
             Integer ii = new Integer(i);
@@ -54,8 +76,33 @@ class WrapperClass
             System.out.println("Double  -> " + dd);
             System.out.println("Char    -> " + cc);
             System.out.println("Boolean -> " + bbll);
+
+            */
+            // creating Wrapper Objects using valueOf() method instead of deprecated Constructors
+            /*
+            Integer intObj = Integer.valueOf(65);
+            int intVar = intObj;
+            System.out.println("intVar -> " + intVar);
+            */
+
+            // created Wrapper Object - Way 2
+            /*
+            Integer intObj = Integer.valueOf("4561");
+            System.out.println(intObj);
+
+            Double d = Double.valueOf("45.65");
+            System.out.println(d);
+            */
+
+            // toString method override by Wrapper Classes
+            String str = "hello World";
+            System.out.println(str.toString());
+
+            A a = new A("Penan");
+            System.out.println(a);
+
+            Integer intValue = Integer.valueOf(456);
+            System.out.println(intValue);
+
       }
-
-
-
 }

@@ -1,4 +1,3 @@
-// Raksha Penan
 // File_6_Implement_Callback_Method.java
 
 
@@ -17,7 +16,7 @@ class NamePrinter implements ActionListener
       public void actionPerformed(ActionEvent e)
       {
             Date d = new Date();
-            System.out.println("Raksha \t" + d);
+            System.out.println("Penan \t" + d);
       }
 }
 

@@ -1,4 +1,4 @@
-// Raksha Penan
+//  Penan
 // File_6_Implement_Callback_Method.java
 
 
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 //       public void actionPerformed(ActionEvent e)
 //       {
 //             Date d = new Date();
-//             System.out.println("Raksha \t" + d);
+//             System.out.println("Penan \t" + d);
 //       }
 // }
 
@@ -32,7 +32,7 @@ import javax.swing.JOptionPane;
 //                                     public void actionPerformed(ActionEvent e)
 //                                     {
 //                                           Date d = new Date();
-//                                           System.out.println("Raksha \t" + d);
+//                                           System.out.println("Penan \t" + d);
 //                                     }
 //                               };
 //       public static void main(String[] args) {
@@ -55,7 +55,7 @@ class OptimisedCode
                                           public void actionPerformed(ActionEvent e)
                                           {
                                                 Date d = new Date();
-                                                System.out.println("Raksha \t" + d);
+                                                System.out.println("Penan \t" + d);
                                           }
                                     }
             );

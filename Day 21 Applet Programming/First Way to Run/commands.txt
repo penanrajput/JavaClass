@@ -1,0 +1,7 @@
+on cmd
+
+javac MyApplet.java
+
+after creating html file
+
+appletviewer test.html
