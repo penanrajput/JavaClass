@@ -1,6 +1,6 @@
 
 /*
-<applet code="My5DrawArc.class" width="400" height="600">
+<applet code="My5DrawArc.class" width="400" height="350">
 </applet>
 
 */
@@ -25,7 +25,7 @@
 import java.applet.Applet;
 import java.awt.Graphics;
 
-public class aMy5DrawArc extends Applet {
+public class My5DrawArc extends Applet {
         public void paint(Graphics g) {
                 g.drawArc(80, 60, 100, 100, 0, 180);
                 g.drawArc(180, 60, 100, 100, 0, -180);

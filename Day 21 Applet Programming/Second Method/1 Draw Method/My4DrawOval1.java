@@ -1,5 +1,5 @@
 /*
-<applet code="My4DrawOval1.class" width="400" height="600">
+<applet code="My4DrawOval1.class" width="400" height="400">
 </applet>
 
 */

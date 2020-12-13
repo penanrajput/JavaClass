@@ -16,97 +16,11 @@ Only four methods are important
 
 ## Screenshots:
 
-+----------------+----------------+----------------+----------------+
-| **Subtopics**  | **Subtopics    | **Code**       | **Screenshot** |
-|                | List**         |                |                |
-+================+================+================+================+
-|                | Basic          | ![](medi       | ![](medi       |
-|                | Structure of   | a\image1.png){ | a\image2.png){ |
-|                | Applet         | width="2.75694 | width="1.28819 |
-|                |                | 44444444446in" | 44444444444in" |
-|                |                | h              | he             |
-|                |                | eight="1.60674 | ight="2.165972 |
-|                |                | 5406824147in"} | 2222222224in"} |
-+----------------+----------------+----------------+----------------+
-| Draw Methods   | DrawString     | ![](med        | ![](media      |
-|                |                | ia\image3.png) | \image4.png){w |
-|                |                | {width="2.6652 | idth="1.475in" |
-|                |                | 77777777778in" | heig           |
-|                |                | heigh          | ht="2.0125in"} |
-|                |                | t="1.38125in"} |                |
-+----------------+----------------+----------------+----------------+
-|                | DrawRect       |                |                |
-+----------------+----------------+----------------+----------------+
-|                | DrawRoundRect  |                |                |
-+----------------+----------------+----------------+----------------+
-|                | DrawOval       |                |                |
-+----------------+----------------+----------------+----------------+
-|                | DrawArc        |                |                |
-+----------------+----------------+----------------+----------------+
-| Fill Method    | FillRect       |                |                |
-|                |                |                |                |
-|                | FillRoundRect  |                |                |
-|                |                |                |                |
-|                | FillOval       |                |                |
-|                |                |                |                |
-|                | FillArc        |                |                |
-+----------------+----------------+----------------+----------------+
-| Color Method   | Two methods    |                |                |
-|                | colorize it    |                |                |
-|                |                |                |                |
-|                | 1\. Color      |                |                |
-|                | Predefined     |                |                |
-|                |                |                |                |
-|                | // there are   |                |                |
-|                | 16 predefined  |                |                |
-|                | values         |                |                |
-|                |                |                |                |
-|                | g.setCo        |                |                |
-|                | lor(Color.RED) |                |                |
-|                |                |                |                |
-|                | 2\. Color User |                |                |
-|                | Defined        |                |                |
-|                |                |                |                |
-|                | Syntax         |                |                |
-|                |                |                |                |
-|                | g.setColor(new |                |                |
-|                | Color(int red, |                |                |
-|                | int green, int |                |                |
-|                | blue))         |                |                |
-|                |                |                |                |
-|                | Example        |                |                |
-|                |                |                |                |
-|                | g.setColor(new |                |                |
-|                | Color(255, 0,  |                |                |
-|                | 0))            |                |                |
-+----------------+----------------+----------------+----------------+
-| Font Method    | Syntax:        |                |                |
-|                |                |                |                |
-|                | new            |                |                |
-|                | Font(String    |                |                |
-|                | fontname,      |                |                |
-|                | style, int     |                |                |
-|                | pointsize)     |                |                |
-|                |                |                |                |
-|                | // style       |                |                |
-|                | values         |                |                |
-|                |                |                |                |
-|                | Font.Plain = 0 |                |                |
-|                |                |                |                |
-|                | Font.BOLD = 1  |                |                |
-|                |                |                |                |
-|                | Font.ITALICS = |                |                |
-|                | 2              |                |                |
-|                |                |                |                |
-|                | Font.BOLD +    |                |                |
-|                | Font.ITALICS = |                |                |
-|                | 3              |                |                |
-+----------------+----------------+----------------+----------------+
-| Life Cycle     | init()         |                |                |
-| Methods        |                |                |                |
-|                | start()        |                |                |
-|                |                |                |                |
-|                | stop()         |                |                |
-|                |                |                |                |
-|                | destroy()      |                |                |
-+----------------+----------------+----------------+----------------+
+| **Name**               | **Screenshot**                                                          |
+|------------------------|-------------------------------------------------------------------------|
+| My1DrawString.java     | <img src="media\image1.png" style="width:1.46535in;height:2.46384in" /> |
+| My2DrawRect\_3X4.java  | <img src="media\image2.png" style="width:1.475in;height:2.0125in" />    |
+| My3DrawRoundRect1.java | <img src="media\image3.png" style="width:1.78168in;height:2.21528in" /> |
+| My4DrawOval1           | <img src="media\image4.png" style="width:1.90371in;height:2.25163in" /> |
+| My5DrawArc             | <img src="media\image5.png" style="width:1.91615in;height:2.02757in" /> |
+|                        |                                                                         |

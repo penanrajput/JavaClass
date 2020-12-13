@@ -1,5 +1,5 @@
 /*
-<applet code="My2DrawRect.class" width="300" height="300">
+<applet code="My2DrawRect_3X4.class" width="300" height="300">
 </applet>
 
 */
@@ -8,7 +8,7 @@
 import java.applet.Applet;
 import java.awt.Graphics;
 
-public class My2DrawRect extends Applet {
+public class My2DrawRect_3X4 extends Applet {
     public void paint(Graphics g) {
         g.drawRect(10, 20, 60, 80);
         g.drawRect(10, 110, 60, 80); // y = 20 + 80 = 100
