@@ -23,4 +23,4 @@ Only four methods are important
 | My3DrawRoundRect1.java | <img src="media\image3.png" style="width:1.78168in;height:2.21528in" /> |
 | My4DrawOval1           | <img src="media\image4.png" style="width:1.90371in;height:2.25163in" /> |
 | My5DrawArc             | <img src="media\image5.png" style="width:1.91615in;height:2.02757in" /> |
-|                        |                                                                         |
+|                        | <img src="media\image6.png" style="width:1.74955in;height:2.06931in" /> |

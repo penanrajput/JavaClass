@@ -1,6 +1,6 @@
 
 /*
-<applet code="MyDrawString1.java" width = 400 height = 400>
+<applet code="My10DrawString1.java" width = 400 height = 400>
 </applet>
 */
 
@@ -8,7 +8,7 @@
 import java.awt.*;
 import java.applet.Applet;
 
-public class MyDrawString1 extends Applet {
+public class My10DrawString1 extends Applet {
 	public void paint(Graphics g) {
 
 		int n = 10;
