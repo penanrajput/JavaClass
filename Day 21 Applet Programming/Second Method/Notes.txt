@@ -1,0 +1,13 @@
+// RandomRange(int, int)
+public static int randomRange(int lower, int upper) {
+    int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
+    return num;
+}
+
+
+// Random Range(int, int, int)
+public static int randomRange(int lower, int upper, int step) {
+    int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
+    num = num - (num % step);
+    return num;
+}

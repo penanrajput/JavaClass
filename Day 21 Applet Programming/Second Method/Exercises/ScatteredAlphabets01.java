@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class MyColorProject2Applet extends Applet {
     public int randomRange(int lower, int upper) {
-        return (int) (Math.random() * (upper - lower)) + lower;
+        return (int) (Math.random() * (upper + 1 - lower)) + lower;
     }
 
     public void paint(Graphics g) {

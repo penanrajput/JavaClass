@@ -9,16 +9,15 @@ import java.awt.*;
 
 public class ScatteredAlphabets extends Applet {
 
-    public int randomRange(int lower, int upper) {
-        int num = (int) (Math.random() * (upper - lower)) + lower;
+    public static int randomRange(int lower, int upper) {
+        int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
         return num;
     }
 
-    public int randomRange(int lower, int upper, int step) {
-        int num = (int) (Math.random() * (upper - lower)) + lower;
+    public static int randomRange(int lower, int upper, int step) {
+        int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
         num = num - (num % step);
         return num;
-
     }
 
     public void paint(Graphics g) {

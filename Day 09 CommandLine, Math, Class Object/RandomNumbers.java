@@ -2,16 +2,14 @@
 public class RandomNumbers {
 
     public static int randomRange(int lower, int upper) {
-        int num = (int) (Math.random() * (upper - lower)) + lower;
+        int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
         return num;
-
     }
 
     public static int randomRange(int lower, int upper, int step) {
-        int num = (int) (Math.random() * (upper - lower)) + lower;
-        num = num - (num % 5);
+        int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
+        num = num - (num % step);
         return num;
-
     }
 
     public static void main(String[] args) {
@@ -67,7 +65,7 @@ public class RandomNumbers {
         // Scanner in = new Scanner(System.in);
         // int lower = in.nextInt();
         // int upper = in.nextInt();
-        // int r = (int) (Math.random() * (upper - lower)) + lower;
+        // int r = (int) (Math.random() * (upper + 1 - lower)) + lower;
         // System.out.println(r);
         // If You want to specify a more decent range, like from 10 to 100 ( both are in
         // the range )
@@ -85,7 +83,7 @@ public class RandomNumbers {
 
         // for(int i=1; i<=n; i++)
         // {
-        // int r = (int) (Math.random() * (upper - lower)) + lower;
+        // int r = (int) (Math.random() * (upper +1 - lower)) + lower;
         // System.out.print(r+" ");
 
         // }

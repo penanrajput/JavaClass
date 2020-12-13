@@ -1,5 +1,5 @@
 /*
-<applet code="ScatteredAlphabets02.class" width="400" height="600">
+<applet code="My32RectInsideRect.class" width="1250" height="550">
 </applet>
 
 */
@@ -7,8 +7,7 @@
 import java.applet.Applet;
 import java.awt.*;
 
-public class ScatteredAlphabets02 extends Applet {
-
+public class My32RectInsideRect extends Applet {
     public static int randomRange(int lower, int upper) {
         int num = (int) (Math.random() * (upper + 1 - lower)) + lower;
         return num;
@@ -22,18 +21,13 @@ public class ScatteredAlphabets02 extends Applet {
 
     public void paint(Graphics g) {
 
-        // g.setFont(new Font("Consolas", Font.ITALIC, 20));
-        for (int i = 0, j = 0; i < 800; i++, j += 20) {
+        for (int i = 0, j = 0; i < 13; i++, j += 20) {
             int red = randomRange(0, 255);
             int green = randomRange(0, 255);
             int blue = randomRange(0, 255);
             g.setColor(new Color(red, green, blue));
-            char ch = (char) (randomRange(65, 92));
-            int x = randomRange(25, 375, 20);
-            int y = randomRange(25, 575, 20);
+            g.fillRect(20 + j, 20 + j, 1200 - 2 * j, 500 - 2 * j);
 
-            g.drawString(Character.toString(ch), x, y);
-            // g.drawString("" + x + " " + y, x, y);
         }
 
     }
