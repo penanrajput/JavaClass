@@ -30,4 +30,5 @@ class InheritanceDemo {
 		b.paint();
 
 	}
+
 }

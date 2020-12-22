@@ -2,7 +2,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Stack;
 
-class CalculatorDemo extends Frame implements ActionListener {
+class CalculatorDemov2 extends Frame implements ActionListener {
+
+    /*
+     * Design of App
+     * 
+     * Panel header {textField "tf", Clear Button "clear"} ;
+     * 
+     * Panel panel {Buttons};
+     */
     TextField tf = new TextField(30);
     Panel header = new Panel();
     Button clear = new Button("CLEAR");
@@ -13,9 +21,9 @@ class CalculatorDemo extends Frame implements ActionListener {
     String expression = new String("");
     int ans = 0;
 
-    CalculatorDemo() {
+    CalculatorDemov2() {
         setSize(300, 300);
-        setTitle("CalculatorDemo");
+        setTitle("CalculatorDemov2");
         setLocation(700, 50);
 
         for (int i = 0; i < 4; i++) {
@@ -64,6 +72,50 @@ class CalculatorDemo extends Frame implements ActionListener {
 
         panel.setLayout(new GridLayout(4, 4));
         add(panel);
+
+        // Register KeyEvent
+        tf.addKeyListener(new KeyEventTester());
+    }
+
+    /*
+     * class KeyEventTester extends KeyAdapter {
+     * 
+     * @Override public void keyPressed(KeyEvent e) { int code = e.getKeyCode(); if
+     * (code == KeyEvent.VK_1) { expression += "1";
+     * System.out.println("1 key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_2) { expression += "2"; System.out.println("2 key pressed");
+     * setButtonText(); } else if (code == KeyEvent.VK_3) { expression += "3";
+     * System.out.println("3 key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_4) { expression += "4"; System.out.println("4 key pressed");
+     * setButtonText(); } else if (code == KeyEvent.VK_5) { expression += "5";
+     * System.out.println("5 key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_6) { expression += "6"; System.out.println("6 key pressed");
+     * setButtonText(); } else if (code == KeyEvent.VK_7) { expression += "7";
+     * System.out.println("7 key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_8) { expression += "8"; System.out.println("8 key pressed");
+     * setButtonText(); } else if (code == KeyEvent.VK_9) { expression += "9";
+     * System.out.println("9 key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_ENTER) { expression += "1"; System.out.println("0 key pressed");
+     * setButtonText(); } else if (code == KeyEvent.VK_ENTER) { expression += "01";
+     * System.out.println("Enter key pressed"); setButtonText(); } else if (code ==
+     * KeyEvent.VK_ENTER) { expression += "1";
+     * System.out.println("Enter key pressed");
+     * 
+     * } } }
+     */
+
+    class KeyEventTester extends KeyAdapter {
+        @Override
+        public void keyPressed(KeyEvent e) {
+            int code = e.getKeyCode();
+            if (code == KeyEvent.VK_ENTER) {
+                System.out.println("= key Pressed");
+                ans = findAns(tf.getText());
+                tf.setText("=" + Integer.toString(ans));
+                expression = Integer.toString(ans);
+
+            }
+        }
     }
 
     @Override
@@ -81,10 +133,14 @@ class CalculatorDemo extends Frame implements ActionListener {
             System.out.println(expression);
         } else {
             expression += str;
-            tf.setText(expression);
+            setButtonText();
             System.out.println(expression);
         }
 
+    }
+
+    public void setButtonText() {
+        tf.setText(expression);
     }
 
     int findAns(String exp) {
@@ -189,8 +245,12 @@ class CalculatorDemo extends Frame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        CalculatorDemo frameObject = new CalculatorDemo();
+        CalculatorDemov2 frameObject = new CalculatorDemov2();
         frameObject.setVisible(true);
-
+        frameObject.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                frameObject.dispose();
+            }
+        });
     }
 }
